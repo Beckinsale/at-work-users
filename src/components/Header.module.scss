@@ -1,0 +1,74 @@
+.header {
+  background: var(--color-06);
+  width: 100%;
+}
+
+.inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 16px 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  font-family: var(--font-logo);
+  font-size: 24px;
+  color: var(--color-logo);
+  line-height: 1;
+}
+
+.logoAt {
+  font-weight: 400;
+}
+
+.logoWork {
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  svg {
+    cursor: pointer;
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.userAvatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userName {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-02);
+}
