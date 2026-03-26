@@ -1,0 +1,124 @@
+.card {
+  background: var(--color-06);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 360px;
+}
+
+.archived {
+  .username {
+    color: var(--color-02);
+  }
+
+  .company {
+    color: var(--color-03);
+  }
+
+  .city {
+    color: var(--color-04);
+  }
+}
+
+.avatar {
+  width: 112px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  min-width: 0;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.usernameRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.username {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-accent);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.company {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-02);
+}
+
+.city {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-03);
+}
+
+.menuWrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.menuBtn {
+  background: none;
+  border: none;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+
+  &:hover {
+    background: var(--color-05);
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  background: var(--color-06);
+  border-radius: 12px;
+  box-shadow: 0 0 2px 0 #5a5a5a;
+  padding: 8px;
+  z-index: 10;
+  min-width: 160px;
+}
+
+.dropdownItem {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-01);
+  white-space: nowrap;
+
+  &:hover {
+    color: var(--color-accent);
+  }
+}
