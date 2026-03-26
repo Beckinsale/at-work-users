@@ -14,7 +14,7 @@ const schema = z.object({
   username: z.string().min(2, 'Минимум 2 символа').max(64, 'Максимум 64 символа'),
   email: z.string().email('Некорректный email'),
   city: z.string().min(2, 'Минимум 2 символа').max(64, 'Максимум 64 символа'),
-  phone: z.string().regex(/^\d+$/, 'Только цифры'),
+  phone: z.string().refine((val) => /^[\d\s()+-]+$/.test(val), 'Только цифры и символы'),
   company: z.string().min(2, 'Минимум 2 символа').max(64, 'Максимум 64 символа'),
 });
 
@@ -49,7 +49,7 @@ export default function EditUserPage() {
           username: user.username,
           email: user.email,
           city: user.address.city,
-          phone: user.phone.replace(/\D/g, ''),
+          phone: user.phone,
           company: user.company.name,
         }
       : undefined,

@@ -9,6 +9,11 @@
 }
 
 .archived {
+  .avatar {
+    filter: grayscale(80%);
+    opacity: 0.85;
+  }
+
   .username {
     color: var(--color-02);
   }
