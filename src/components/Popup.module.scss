@@ -1,0 +1,55 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.popup {
+  background: var(--color-06);
+  border-radius: 12px;
+  padding: 32px 40px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--color-03);
+  line-height: 1;
+  padding: 4px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: var(--color-01);
+  }
+}
+
+.checkmark {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.message {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-01);
+  margin: 0;
+  line-height: 1.4;
+}
