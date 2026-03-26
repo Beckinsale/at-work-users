@@ -1,0 +1,41 @@
+// Design tokens
+:root {
+  --color-01: #161616;
+  --color-02: #595959;
+  --color-03: #9c9c9c;
+  --color-04: #dadada;
+  --color-05: #f4f4f4;
+  --color-06: #fdfdfd;
+  --color-accent: #22a0bc;
+  --color-red: #ef1c31;
+  --color-logo: #333153;
+
+  --font-main: 'Manrope', sans-serif;
+  --font-logo: 'Inter', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: var(--color-05);
+  color: var(--color-01);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-main);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
