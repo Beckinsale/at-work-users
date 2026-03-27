@@ -19,7 +19,10 @@ const schema = z.object({
   city: z.string().min(2, 'Минимум 2 символа').max(64, 'Максимум 64 символа'),
   phone: z
     .string()
-    .refine((val) => /^\d+$/.test(val), 'Только цифры'),
+    .refine((val) => {
+      const cleaned = val.replace(/[\s\-()x]/gi, '');
+      return /^\d+$/.test(cleaned);
+    }, 'Только цифры'),
   company: z
     .string()
     .min(2, 'Минимум 2 символа')
