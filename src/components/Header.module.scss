@@ -10,7 +10,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 56px;
+
+  @media (max-width: 768px) {
+    padding: 11px 16px;
+  }
 }
 
 .logo {
@@ -52,13 +55,22 @@
 .icons {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
 
-  svg {
-    cursor: pointer;
-    width: 24px;
-    height: 24px;
+  @media (max-width: 768px) {
+    display: none;
   }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .user {
@@ -78,4 +90,8 @@
   font-size: 16px;
   font-weight: 500;
   color: var(--color-02);
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }

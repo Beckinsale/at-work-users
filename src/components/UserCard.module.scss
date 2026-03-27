@@ -65,12 +65,20 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 }
 
 .company {
   font-size: 16px;
   font-weight: 500;
   color: var(--color-02);
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 .city {
@@ -85,16 +93,44 @@
 }
 
 .menuBtn {
-  background: none;
-  border: none;
-  padding: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 
-  &:hover {
-    background: var(--color-05);
+  &:hover .desktopIcon path {
+    fill: var(--color-accent);
+  }
+
+  &:active .mobileIcon path {
+    fill: var(--color-02);
+  }
+
+  @media (max-width: 768px) {
+    width: 10px;
+    height: 2.5px;
+  }
+}
+
+.desktopIcon {
+  display: block;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.mobileIcon {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
   }
 }
 
@@ -123,7 +159,13 @@
   color: var(--color-01);
   white-space: nowrap;
 
-  &:hover {
-    color: var(--color-accent);
+  @media (min-width: 769px) {
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
   }
 }
